@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+
+  font-family: "Poppins", sans-serif;
+
+  color: var(--color-text);
+  background-color: #3a3845;
+}
+
+:root {
+  --color-primary: #ff6b6b;
+  --color-white: #fff;
+  --color-text: #1b1a17;
+}
+
+/* General */
+
+.heading-1 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  text-transform: none;
+
+  color: var(--color-white);
+}
+
+.btn {
+  outline: none;
+  border: none;
+  background-color: var(--color-white);
+
+  cursor: pointer;
+}
+
+/* Main */
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 80rem;
+  height: 40rem;
+
+  margin: 2rem 0;
+
+  /* background-color: var(--color-white); */
+}
+
+.accordion-btn {
+  width: 100%;
+  padding: 1rem;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: left;
+
+  border: 1px solid whitesmoke;
+  transition: all 0.2s ease-in-out;
+}
+
+.accordion-btn::after {
+  font-family: FontAwesome;
+  content: "\f149";
+
+  float: right;
+
+  color: var(--color-text);
+}
+
+
+.accordion-content {
+  width: 100%;
+  max-height: 0;
+
+  overflow: hidden;
+
+  background-color: var(--color-white);
+
+  transition: all .2s ease-in-out;
+}
+
+.accordion-content p {
+  font-size: 1.6rem;
+
+  padding: 2rem;
+}
+
+/* Dynamic Classes */
+.accordion-btn.is-open::after {
+  content: "\f148";
+}
+
+.accordion-btn.is-open {
+  background-color: #ddd;
+}
+
+.active{
+  max-height: max-content;
+}
+/*  */
